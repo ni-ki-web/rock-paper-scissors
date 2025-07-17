@@ -1,0 +1,218 @@
+:root {
+  --player-color: #007bff;
+  --computer-color: #dc3545;
+  --main-font: "Oxanium", sans-serif;
+  --rock-color: #cce5ff;
+  --rock-hover: #99ccff;
+  --paper-color: #d4edda;
+  --paper-hover: #a8d5a8;
+  --scissors-color: #f8d7da;
+  --scissors-hover: #e6a1a7;
+}
+
+body {
+  font-family: var(--main-font);
+  text-align: center;
+  padding: 2rem;
+}
+
+.game-container {
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+h1 {
+  padding-bottom: 2rem;
+}
+
+#round {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+}
+
+/*====== Styling Buttons ====== */
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.choices button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.8rem;
+  font-family: var(--main-font);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.choices button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.choices button:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+  transition: none;
+}
+
+.choices button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  pointer-events: none;
+}
+
+.choices i {
+  margin-right: 0.5rem;
+}
+
+#restartBtn {
+  margin-top: 2rem;
+  /* Shared styles with other buttons */
+  font-family: var(--main-font);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+#restartBtn:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+[data-type="rock"] {
+  background-color: var(--rock-color);
+}
+
+[data-type="rock"]:hover {
+  background-color: var(--rock-hover);
+}
+
+[data-type="paper"] {
+  background-color: var(--paper-color);
+}
+
+[data-type="paper"]:hover {
+  background-color: var(--paper-hover);
+}
+
+[data-type="scissors"] {
+  background-color: var(--scissors-color);
+}
+
+[data-type="scissors"]:hover {
+  background-color: var(--scissors-hover);
+}
+
+/* ====== Functional UI Styling ====== */
+.score, .result {
+  margin: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.selections {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.selections i {
+  vertical-align: middle;
+}
+
+.result {
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.result.win {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.result.lose {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.result.tie {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+/* ===== Icon Colors ===== */
+.rock-icon {
+  margin-left: 4px;
+  color: var(--rock-hover); 
+}
+
+.paper-icon {
+  margin-left: 4px;
+  color: var(--paper-hover); 
+}
+
+.scissors-icon {
+  margin-left: 4px;
+  color: var(--scissors-hover); 
+}
+
+/* ===== Score Styling ===== */
+.human-score {
+  color: var(--player-color);
+}
+
+.computer-score {
+  color: var(--computer-color);
+}
+
+.human-score, .computer-score {
+  font-size: 2rem; 
+  font-weight: 700; 
+  margin-left: 4px;
+}
+
+/* ====== Media Queries ====== */
+@media (max-width: 600px) {
+  .choices {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .choices button, #restartBtn {
+    width: 80%;
+    max-height: 100px;
+    max-width: 300px;
+    margin: 0.5rem;
+  }
+
+  h1 {
+    padding-bottom: 1rem;
+  }
+
+  .score, .result, .selections {
+    margin: 1rem;
+    font-size: 1.1rem;
+  }
+
+  #round {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Google Font - Oxanium -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+
+        <div id="round">Round 1 of 5</div>
+
+        <div class="score" id="score">You: 0 | Computer: 0</div>
+
+        <div class="choices">
+            <button data-type="rock"><i class="fa-solid fa-hand-back-fist"></i>Rock</button>
+            <button data-type="paper"><i class="fa-solid fa-hand-paper"></i>Paper</button>
+            <button data-type="scissors"><i class="fa-solid fa-hand-scissors"></i>Scissors</button>
+        </div>
+
+        <div class="selections" id="selections">You: - | Computer: - </div>
+
+        <div class="result" id="result">Make your Move!</div>
+
+        <button id="restartBtn"> Restart Game </button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
