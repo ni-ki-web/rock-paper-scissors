@@ -3,7 +3,7 @@
 A simple web-based Rock Paper Scissors game built using **HTML**, **CSS** and **JavaScript**. The player competes against the computer by selecting rock, paper or scissors, and the game determines the winner based on classic rules.
 
 
-> Want to try it now? [Jump to the live demo ⬇](#live-demo)
+*Want to try it now? [Jump to the live demo ⬇](#live-demo)*
 
 
 ## Features
@@ -51,4 +51,4 @@ Here is how the game looks after a round has been played:
 
 
 ## Live Demo
->> [Play it here](https://ni-ki-web.github.io/rock-paper-scissors/) <<
+**[Play it here](https://ni-ki-web.github.io/rock-paper-scissors/)**
